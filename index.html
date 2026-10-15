@@ -8,20 +8,23 @@
 </head>
 
 <body>
-  <nav>
+  <header>
     <div class="logo">
       <figure>
         <img src="./img/logo.jpg" alt="Logo" width="300" />
       </figure>
+      <h1>MUEBLESIG HONDURAS</h1>
     </div>
+  </header>
 
+  <nav>
     <div class="enlaces-nav">
       <ul>
         <li><a href="#">Inicio</a></li>
         <li><a href="#catalogo">Catalogo</a></li>
         <li><a href="#lote">Lotes especiales</a></li>
         <li><a href="#licitaciones">Licitaciones</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#info-locacion">Contacto</a></li>
         <li>
           <button><a href="https://web.whatsapp.com/">Cotizar</a></button>
         </li>
@@ -42,7 +45,6 @@
     <section id="inicio">
       <div>
         <div>
-          <h1>MUEBLESIG HONDURAS</h1>
           <p>Somos la fabrica de muebles y carpinteria más confible de Honduras</p>
         </div>
       </div>
@@ -262,6 +264,61 @@
 
     </section>
 
+    <section id="calculadora">
+      <div>
+        <div>
+          <h2>Calcule su presupuesto de Lotes</h2>
+          <p>Simula el presupuesto de un lote de mobiliario institucional.</p>
+
+          <form action="#" method="post">
+            <div>
+              <div>
+                <label for="cantidad">Cantidad de Piezas a Cotizar</label>
+                <input type="number" min="1" required placeholder="10">
+              </div>
+            </div>
+
+            <div>
+              <label for="mueble">Tipo de mueble</label>
+
+              <select id="mueble" name="mueble" required>
+                <option value="" disabled selected>Seleccione un mueble</option>
+                <option value="1290">Pupitre Universitario - L. 1,290</option>
+                <option value="4800">Silla Ergonómica Operativa - L. 4,800</option>
+                <option value="24500">Escritorio Ejecutivo en Caoba - L. 24,500</option>
+                <option value="39900">Mesa de Directorio en Cedro - L. 39,900</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="destino">Destino y flete sobre la CA-5</label>
+
+              <select id="destino" name="destino" required>
+                <option value="" disabled selected>Seleccione un destino</option>
+                <option value="300">Siguatepeque/Comayagua - Flete: L. 300</option>
+                <option value="1000">Tegucigalpa o SPS - Flete: L. 1,000</option>
+                <option value="3500">Roatán/Islas de la Bahía - Flete: L. 3,500</option>
+              </select>
+            </div>
+
+            <aside>
+              Descuento institucional del 12% a partir de 10 piezas.
+            </aside>
+
+            <button type="button" id="calcular-presupuesto">Calcular Presupuesto</button>
+
+            <section class="resultado">
+              <h2>Presupuesto estimado</h2>
+              <output id="resultado" name="resultado" for="cantidad mueble destino">El costo estimado
+                de su pedido es ...</output>
+            </section>
+          </form>
+
+        </div>
+      </div>
+
+    </section>
+
     <section id="licitaciones">
 
       <form action="#licitaciones" method="post">
@@ -330,12 +387,12 @@
 
     </section>
 
-    <section id="contacto"></section>
+
 
   </main>
 
   <footer>
-    <div class="info-locacion">
+    <div id="info-locacion">
       <p>Siguatepeque. KM 114 Carretera CA-5.</p>
       <p>Tel: 2238-0000</p>
     </div>
