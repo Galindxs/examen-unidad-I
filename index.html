@@ -5,11 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MUBLESIG HONDURAS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body>
+<body class="bg-dark text-white">
+
   <header>
-    <div class="logo">
+    <div class="logo text-center">
       <figure>
         <img src="./img/logo.jpg" alt="Logo" width="300" />
       </figure>
@@ -17,251 +21,253 @@
     </div>
   </header>
 
-  <nav>
-    <div class="enlaces-nav">
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#catalogo">Catalogo</a></li>
-        <li><a href="#lote">Lotes especiales</a></li>
-        <li><a href="#licitaciones">Licitaciones</a></li>
-        <li><a href="#info-locacion">Contacto</a></li>
+  <nav class="navbar navbar-expand-lg sticky-top py-1 bg-light">
+    <div class="container enlaces-nav text-dark">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-link px-3"><a href="#">Inicio</a></li>
+        <li class="nav-link px-3"><a href="#catalogo">Catalogo</a></li>
+        <li class="nav-link px-3"><a href="#lote">Descuentos</a></li>
+        <li class="nav-link px-3"><a href="#licitaciones">Licitaciones</a></li>
+        <li class="nav-link px-3"><a href="#info-locacion">Contacto</a></li>
         <li>
-          <button><a href="https://web.whatsapp.com/">Cotizar</a></button>
+          <button class="btn btn-outline-primary"><a href="https://web.whatsapp.com/">Cotizar</a></button>
         </li>
       </ul>
     </div>
 
-    <div class="atencion-detalles">
+    <div class="container justify-content-end atencion-detalles text-dark">
       <div>
-        <p>Atención al Cliente: 9865-6575</p>
+        <p>Atención al Cliente: <br> 9865-6575</p>
       </div>
-      <div>
-        <p>Horarios: Lun-Vie 8am - 5pm</p>
+      <div class="px-3">
+        <p>Horarios: <br>Lun-Vie 8am - 5pm</p>
       </div>
     </div>
   </nav>
 
   <main>
-    <section id="inicio">
-      <div>
-        <div>
+    <section class="container align-items-lg-center" id="inicio">
+      <div class="text-center">
+        <div class="py-3">
           <p>Somos la fabrica de muebles y carpinteria más confible de Honduras</p>
         </div>
       </div>
     </section>
 
-    <section id="catalogo">
-      <article>
-        <div class="card">
-          <div>
-            <figure class="producto">
-              <img src="./img/inventario/escritorio1.jpg" alt="escritorio1" width="200" />
-            </figure>
+    <section id="catalogo" class="container text-dark">
+      <div class="row g-4 text-center">
+        <article class="col-lg-3" class="col-lg-3">
+          <div
+            class="card h-100 border-0 shadow-sm rounded-4 p-3 h-100 border-0 shadow-sm rounded-4 p-3 h-100 border-0 shadow-sm rounded-4 p-3 h-100 border-0 shadow-sm rounded-4 p-3 h-100 border-0 shadow-sm rounded-4 p-3">
+            <div>
+              <figure class="producto">
+                <img src="./img/inventario/escritorio1.jpg" alt="escritorio1" width="200" />
+              </figure>
+            </div>
+            <div>
+              <h2>Escritorio Grande</h2>
+              <p>para Realizar todos sus trabajos con la mayor comodidad</p>
+            </div>
+            <div class="precio">
+              <p>Lps.200</p>
+            </div>
           </div>
-          <div>
-            <h2>Escritorio Grande</h2>
-            <p>para Realizar todos sus trabajos con la mayor comodidad</p>
-          </div>
-          <div class="precio">
-            <p>Lps.200</p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <article>
-        <div class="card">
-          <div>
-            <figure class="producto">
-              <img src="./img/inventario/escritorio2.webp" alt="escritorio1" width="200" />
-            </figure>
+        <article class="col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+            <div>
+              <figure class="producto">
+                <img src="./img/inventario/escritorio2.webp" alt="escritorio1" width="200" />
+              </figure>
+            </div>
+            <div>
+              <h2>Escritorio grande modelo 2</h2>
+              <p>para Realizar todos sus trabajos con la mayor comodidad</p>
+            </div>
+            <div class="precio">
+              <p>Lps.200</p>
+            </div>
           </div>
-          <div>
-            <h2>Escritorio grande modelo 2</h2>
-            <p>para Realizar todos sus trabajos con la mayor comodidad</p>
-          </div>
-          <div class="precio">
-            <p>Lps.200</p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <article>
-        <div class="card">
-          <div>
-            <figure class="producto">
-              <img src="./img/inventario/escritorio3.webp" alt="escritorio" width="200" />
-            </figure>
+        <article class="col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+            <div>
+              <figure class="producto">
+                <img src="./img/inventario/escritorio3.webp" alt="escritorio" width="200" />
+              </figure>
+            </div>
+            <div>
+              <h2>Escritorio Grande</h2>
+              <p>para Realizar todos sus trabajos con la mayor comodidad</p>
+            </div>
+            <div class="precio">
+              <p>Lps.200</p>
+            </div>
           </div>
-          <div>
-            <h2>Escritorio Grande</h2>
-            <p>para Realizar todos sus trabajos con la mayor comodidad</p>
-          </div>
-          <div class="precio">
-            <p>Lps.200</p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <article>
-        <div class="card">
-          <div>
-            <figure class="producto">
-              <img src="./img/inventario/escritorio4.webp" alt="escritorio4" width="200" />
-            </figure>
+        <article class="col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+            <div>
+              <figure class="producto">
+                <img src="./img/inventario/escritorio4.webp" alt="escritorio4" width="200" />
+              </figure>
+            </div>
+            <div>
+              <h2>Escritorio Grande</h2>
+              <p>para Realizar todos sus trabajos con la mayor comodidad</p>
+            </div>
+            <div class="precio">
+              <p>Lps.200</p>
+            </div>
           </div>
-          <div>
-            <h2>Escritorio Grande</h2>
-            <p>para Realizar todos sus trabajos con la mayor comodidad</p>
-          </div>
-          <div class="precio">
-            <p>Lps.200</p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <article>
-        <div class="card">
-          <div>
-            <figure class="producto">
-              <img src="./img/inventario/escritorio5.jpg" alt="escritorio5" width="200" />
-            </figure>
+        <article class="col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+            <div>
+              <figure class="producto">
+                <img src="./img/inventario/escritorio5.jpg" alt="escritorio5" width="200" />
+              </figure>
+            </div>
+            <div>
+              <h2>Escritorio Grande</h2>
+              <p>para Realizar todos sus trabajos con la mayor comodidad</p>
+            </div>
+            <div class="precio">
+              <p>Lps.200</p>
+            </div>
           </div>
-          <div>
-            <h2>Escritorio Grande</h2>
-            <p>para Realizar todos sus trabajos con la mayor comodidad</p>
-          </div>
-          <div class="precio">
-            <p>Lps.200</p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <article>
-        <div class="card">
-          <div>
-            <figure class="producto">
-              <img src="./img/inventario/estante1.jpg" alt="estante1" width="200" />
-            </figure>
+        <article class="col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+            <div>
+              <figure class="producto">
+                <img src="./img/inventario/estante1.jpg" alt="estante1" width="200" />
+              </figure>
+            </div>
+            <div>
+              <h2>Estante organizador</h2>
+              <p>Guardar sus cosas</p>
+            </div>
           </div>
-          <div>
-            <h2>Estante organizador</h2>
-            <p>Guardar sus cosas</p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <article>
-        <div class="card">
-          <div>
-            <figure class="producto">
-              <img src="./img/inventario/estante2.jpg" alt="estante2" width="200" />
-            </figure>
+        <article class="col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+            <div>
+              <figure class="producto">
+                <img src="./img/inventario/estante2.jpg" alt="estante2" width="200" />
+              </figure>
+            </div>
+            <div>
+              <h2>Estante</h2>
+              <p>para Realizar todos sus trabajos con la mayor comodidad</p>
+            </div>
+            <div class="precio">
+              <p>Lps.200</p>
+            </div>
           </div>
-          <div>
-            <h2>Estante</h2>
-            <p>para Realizar todos sus trabajos con la mayor comodidad</p>
-          </div>
-          <div class="precio">
-            <p>Lps.200</p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <article>
-        <div class="card">
-          <div>
-            <figure class="producto">
-              <img src="./img/inventario/sofa3.webp" alt="escritorio" width="200" />
-            </figure>
+        <article class="col-lg-3">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+            <div>
+              <figure class="producto">
+                <img src="./img/inventario/sofa3.webp" alt="escritorio" width="200" />
+              </figure>
+            </div>
+            <div>
+              <h2>Escritorio Grande</h2>
+              <p>para Realizar todos sus trabajos con la mayor comodidad</p>
+            </div>
+            <div class="precio">
+              <p>Lps.200</p>
+            </div>
           </div>
-          <div>
-            <h2>Escritorio Grande</h2>
-            <p>para Realizar todos sus trabajos con la mayor comodidad</p>
-          </div>
-          <div class="precio">
-            <p>Lps.200</p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <article>
-        <div class="card">
-          <div>
-            <figure class="producto">
-              <img src="./img/inventario/pupitre1.jpg" alt="pupitre" width="200" />
-            </figure>
+        <article class="col-lg-6">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 h-100 border-0 shadow-sm rounded-4 p-3">
+            <div>
+              <figure class="producto">
+                <img src="./img/inventario/pupitre1.jpg" alt="pupitre" width="200" />
+              </figure>
+            </div>
+            <div>
+              <h2>Escritorio Grande</h2>
+              <p>para Realizar todos sus trabajos con la mayor comodidad</p>
+            </div>
+            <div class="precio">
+              <p>Lps.200</p>
+            </div>
           </div>
-          <div>
-            <h2>Escritorio Grande</h2>
-            <p>para Realizar todos sus trabajos con la mayor comodidad</p>
-          </div>
-          <div class="precio">
-            <p>Lps.200</p>
-          </div>
-        </div>
-      </article>
+        </article>
 
-      <article>
-        <div class="card">
-          <div>
-            <figure class="producto">
-              <img src="./img/inventario/pupitre2.webp" alt="escritorio" width="200" />
-            </figure>
+        <article class="col-lg-6">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+            <div>
+              <figure class="producto">
+                <img src="./img/inventario/pupitre2.webp" alt="escritorio" width="200" />
+              </figure>
+            </div>
+            <div>
+              <h2>Escritorio Grande</h2>
+              <p>para Realizar todos sus trabajos con la mayor comodidad</p>
+            </div>
+            <div class="precio">
+              <p>Lps.200</p>
+            </div>
           </div>
-          <div>
-            <h2>Escritorio Grande</h2>
-            <p>para Realizar todos sus trabajos con la mayor comodidad</p>
-          </div>
-          <div class="precio">
-            <p>Lps.200</p>
-          </div>
-        </div>
-      </article>
-
+        </article>
+      </div>
     </section>
 
-    <section id="lote">
-      <div>
-        <h2>Decuentos y Liquidaciones</h2>
+    <section id="lote" class="container">
+      <div class="py-5">
+        <h2 class="text-center">Decuentos y Liquidaciones</h2>
       </div>
+      <div class="row g-4 text-center text-dark">
+        <article>
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+            <div>
+              <figure class="producto">
+                <img src="./img/inventario/sofa2.jpg" alt="escritorio" width="200" />
+              </figure>
+            </div>
+            <div>
+              <h2>Oferta</h2>
+            </div>
+            <div>
+              <h2>Sofa de Sala Gris</h2>
+              <p>Madera de Pino, colores gris / azul / Beige</p>
+            </div>
+            <div class="precio">
+              <p><s>Lps. 4,500</s> <strong>Lps. 3,800</strong></p>
+            </div>
+          </div>
+        </article>
 
-      <article>
-        <div class="card">
-          <div>
-            <figure class="producto">
-              <img src="./img/inventario/sofa2.jpg" alt="escritorio" width="200" />
-            </figure>
+        <article>
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+            <div>
+              <figure class="producto">
+                <img src="./img/inventario/sofa1.png" alt="escritorio" width="200" />
+              </figure>
+            </div>
+            <div>
+              <h2>Sofa Unipersonal Doble</h2>
+              <p>Madera de nogal, colores beige / blanco</p>
+            </div>
+            <div class="precio">
+              <p><s>Lps. 3,700</s> <strong>Lps.3,000</strong></p>
+            </div>
           </div>
-          <div>
-            <h2>Oferta</h2>
-          </div>
-          <div>
-            <h2>Sofa de Sala Gris</h2>
-            <p>Madera de Pino, colores gris / azul / Beige</p>
-          </div>
-          <div class="precio">
-            <p><s>Lps. 4,500</s> <strong>Lps. 3,800</strong></p>
-          </div>
-        </div>
-      </article>
-
-      <article>
-        <div class="card">
-          <div>
-            <figure class="producto">
-              <img src="./img/inventario/sofa1.png" alt="escritorio" width="200" />
-            </figure>
-          </div>
-          <div>
-            <h2>Sofa Unipersonal Doble</h2>
-            <p>Madera de nogal, colores beige / blanco</p>
-          </div>
-          <div class="precio">
-            <p><s>Lps. 3,700</s> <strong>Lps.3,000</strong></p>
-          </div>
-        </div>
-      </article>
-
+        </article>
+      </div>
     </section>
 
     <section id="calculadora">
@@ -322,63 +328,63 @@
     <section id="ficha-tecnica-certificados">
       <div>
         <div>
-            <h2>Comparación de características técnicas y ambientales</h2>
-            <div>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Tipo Madera</th>
-                    <th>Clasificación</th>
-                    <th>Caracteristicas</th>
-                    <th>Durabilidad</th>
-                    <th>Facilidad de Trabajo</th>
-                    <th>Usos Principales</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Caoba</td>
-                    <td>Madera dura</td>
-                    <td>Color marrón rojizo, grano fino, acabado elegante y brillante</td>
-                    <td>Muy alta (resistente a insectos y humedad)</td>
-                    <td>Fácil (Se talla y pule excelente)</td>
-                    <td>Muebles de lujo, instrumentos músicales, embarcaciones</td>
-                  </tr>
-                  <tr>
-                    <td>Pino</td>
-                    <td>Madera blanda</td>
-                    <td>Color claro/amarillento, nudos visibles, ligera y económica</td>
-                    <td>Baja a media</td>
-                    <td>Muy fáci</td>
-                    <td>Muebles rústicos, contrachapados</td>
-                  </tr>
-                  <tr>
-                    <td>Cedro</td>
-                    <td>Madera blanda</td>
-                    <td>Color rojizo, aroma carácteristico, ligera y repele insectos</td>
-                    <td>Alta</td>
-                    <td>Fácil</td>
-                    <td>Revestimientos exteriores, armarios</td>
-                  </tr>
-                  <tr>
-                    <td>Roble</td>
-                    <td>Madera dura</td>
-                    <td>Color pardo de claro a oscuro, grano grueso, muy pesada</td>
-                    <td>Muy alta</td>
-                    <td>Media a dificil</td>
-                    <td>barricadas de vino, estructuras pesadas</td>
-                  </tr>
-                  <tr>
-                    <td>Nogal</td>
-                    <td>Madera dura</td>
-                    <td>Color chocolate oscuro, veteado vistisi, muy estética</td>
-                    <td>Alta</td>
-                    <td>Fácil a media</td>
-                    <td>Muebles de alta gama, ebanistería</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <h2>Comparación de características técnicas y ambientales</h2>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Tipo Madera</th>
+                  <th>Clasificación</th>
+                  <th>Caracteristicas</th>
+                  <th>Durabilidad</th>
+                  <th>Facilidad de Trabajo</th>
+                  <th>Usos Principales</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Caoba</td>
+                  <td>Madera dura</td>
+                  <td>Color marrón rojizo, grano fino, acabado elegante y brillante</td>
+                  <td>Muy alta (resistente a insectos y humedad)</td>
+                  <td>Fácil (Se talla y pule excelente)</td>
+                  <td>Muebles de lujo, instrumentos músicales, embarcaciones</td>
+                </tr>
+                <tr>
+                  <td>Pino</td>
+                  <td>Madera blanda</td>
+                  <td>Color claro/amarillento, nudos visibles, ligera y económica</td>
+                  <td>Baja a media</td>
+                  <td>Muy fáci</td>
+                  <td>Muebles rústicos, contrachapados</td>
+                </tr>
+                <tr>
+                  <td>Cedro</td>
+                  <td>Madera blanda</td>
+                  <td>Color rojizo, aroma carácteristico, ligera y repele insectos</td>
+                  <td>Alta</td>
+                  <td>Fácil</td>
+                  <td>Revestimientos exteriores, armarios</td>
+                </tr>
+                <tr>
+                  <td>Roble</td>
+                  <td>Madera dura</td>
+                  <td>Color pardo de claro a oscuro, grano grueso, muy pesada</td>
+                  <td>Muy alta</td>
+                  <td>Media a dificil</td>
+                  <td>barricadas de vino, estructuras pesadas</td>
+                </tr>
+                <tr>
+                  <td>Nogal</td>
+                  <td>Madera dura</td>
+                  <td>Color chocolate oscuro, veteado vistisi, muy estética</td>
+                  <td>Alta</td>
+                  <td>Fácil a media</td>
+                  <td>Muebles de alta gama, ebanistería</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
@@ -477,6 +483,8 @@
       </figure>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
