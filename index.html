@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MUBLESIG HONDURAS</title>
+  <link rel="stylesheet" href="./css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -14,8 +15,8 @@
 
   <header>
     <div class="logo text-center">
-      <figure>
-        <img src="./img/logo.jpg" alt="Logo" width="300" />
+      <figure class="py-3">
+        <img class="img-fluid rounded" src="./img/logo.jpg" alt="Logo" width="100" />
       </figure>
       <h1>MUEBLESIG HONDURAS</h1>
     </div>
@@ -23,6 +24,7 @@
 
   <nav class="navbar navbar-expand-lg sticky-top py-1 bg-light">
     <div class="container enlaces-nav text-dark">
+
       <ul class="navbar-nav ms-auto align-items-lg-center">
         <li class="nav-link px-3"><a href="#">Inicio</a></li>
         <li class="nav-link px-3"><a href="#catalogo">Catalogo</a></li>
@@ -270,54 +272,69 @@
       </div>
     </section>
 
-    <section id="calculadora">
-      <div>
-        <div>
-          <h2>Calcule su presupuesto de Lotes</h2>
-          <p>Simula el presupuesto de un lote de mobiliario institucional.</p>
+    <section class="py-5 " id="calculadora">
+      <div class="container">
+        <div class="row py-3 bg-light text-dark justify-content-center">
+          <h2 class="text-center">Calcule su presupuesto de Lotes</h2>
+          <p class="px-5">Simula el presupuesto de un lote de mobiliario institucional.</p>
 
           <form action="#" method="post">
-            <div>
-              <div>
-                <label for="cantidad">Cantidad de Piezas a Cotizar</label>
-                <input type="number" min="1" required placeholder="10">
+            <div class="row g-3 form-floating">
+              <div class="row g-3 align-items-center">
+                <div class="col-3">
+                  <label class="col-form-label" for="cantidad">Cantidad de Piezas a Cotizar</label>
+                </div>
+                <div class="col-auto">
+                  <input class="form-control" type="number" min="1" required placeholder="10">
+                </div>
               </div>
+
+              <div class="row g-3 align-items-center">
+                <div class="col-3">
+                  <label for="mueble">Tipo de mueble</label>
+                </div>
+                <div class="col-auto">
+                  <select id="mueble" name="mueble" required>
+                    <option value="" disabled selected>Seleccione un mueble</option>
+                    <option value="1290">Pupitre Universitario - L. 1,290</option>
+                    <option value="4800">Silla Ergonómica Operativa - L. 4,800</option>
+                    <option value="24500">Escritorio Ejecutivo en Caoba - L. 24,500</option>
+                    <option value="39900">Mesa de Directorio en Cedro - L. 39,900</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row g-3 align-items-center">
+                <div class="col-3">
+                  <label for="destino">Destino y flete sobre la CA-5</label>
+                </div>
+
+                <div class="col-auto">
+                  <select id="destino" name="destino" required>
+                    <option value="" disabled selected>Seleccione un destino</option>
+                    <option value="300">Siguatepeque/Comayagua - Flete: L. 300</option>
+                    <option value="1000">Tegucigalpa o SPS - Flete: L. 1,000</option>
+                    <option value="3500">Roatán/Islas de la Bahía - Flete: L. 3,500</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-8 ">
+                <aside class="col-4">
+                  Descuento institucional del 12% a partir de 10 piezas.
+                </aside>
+              </div>
+
+
+              <button class="btn btn-outline-primary" type="button" id="calcular-presupuesto">Calcular
+                Presupuesto</button>
+
+              <section class="resultado text-center">
+                <h2 class="text-center">Presupuesto estimado</h2>
+                <output id="resultado" name="resultado" for="cantidad mueble destino">El costo estimado
+                  de su pedido es ...</output>
+              </section>
             </div>
-
-            <div>
-              <label for="mueble">Tipo de mueble</label>
-
-              <select id="mueble" name="mueble" required>
-                <option value="" disabled selected>Seleccione un mueble</option>
-                <option value="1290">Pupitre Universitario - L. 1,290</option>
-                <option value="4800">Silla Ergonómica Operativa - L. 4,800</option>
-                <option value="24500">Escritorio Ejecutivo en Caoba - L. 24,500</option>
-                <option value="39900">Mesa de Directorio en Cedro - L. 39,900</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="destino">Destino y flete sobre la CA-5</label>
-
-              <select id="destino" name="destino" required>
-                <option value="" disabled selected>Seleccione un destino</option>
-                <option value="300">Siguatepeque/Comayagua - Flete: L. 300</option>
-                <option value="1000">Tegucigalpa o SPS - Flete: L. 1,000</option>
-                <option value="3500">Roatán/Islas de la Bahía - Flete: L. 3,500</option>
-              </select>
-            </div>
-
-            <aside>
-              Descuento institucional del 12% a partir de 10 piezas.
-            </aside>
-
-            <button type="button" id="calcular-presupuesto">Calcular Presupuesto</button>
-
-            <section class="resultado">
-              <h2>Presupuesto estimado</h2>
-              <output id="resultado" name="resultado" for="cantidad mueble destino">El costo estimado
-                de su pedido es ...</output>
-            </section>
           </form>
 
         </div>
@@ -325,13 +342,13 @@
 
     </section>
 
-    <section id="ficha-tecnica-certificados">
-      <div>
-        <div>
-          <h2>Comparación de características técnicas y ambientales</h2>
-          <div>
-            <table>
-              <thead>
+    <section class="py-5 bg-dark border-top border-bottom text-dark" id="ficha-tecnica-certificados">
+      <div class="container">
+        <div class="bg-dark px-1 text-white">
+          <h2 class="text-center">Comparación de características Técnicas y Ambientales</h2>
+          <div class="table-responsive shadow-sm bg-beige text-dark rounded-4 border">
+            <table class="table table-hover table-striped align-middle mb-0a">
+              <thead class="table">
                 <tr>
                   <th>Tipo Madera</th>
                   <th>Clasificación</th>
@@ -389,98 +406,109 @@
       </div>
     </section>
 
-    <section id="licitaciones">
+    <section class="py-5 bg-dark" id="licitaciones">
+      <div class="container bg-beige text-dark py-lg-4">
+        <div class="row justify-content-center">
+          <form action="#licitaciones" method="post">
 
-      <form action="#licitaciones" method="post">
+            <div class="row g-3 px-5 justify-content-center">
 
-        <div>
+              <div class="form-floating">
+                <div>
+                  <label class="form-label" for="nombre">Nombre solicitante </label>
+                  <input class="form-control" type="text" required placeholder="Nombre Solicitante">
+                </div>
+              </div>
 
-          <div>
-            <div>
-              <label for="nombre">Nombre solicitante </label>
-              <input type="text" required placeholder="Nombre Solicitante">
+              <div>
+                <div>
+                  <label for="rtn">RTN Institucional</label>
+                  <input class="form-control" type="number" required minlength="14" maxlength="14"
+                    placeholder="0000-0000-000000">
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <label for="correo">Correo Institucional</label>
+                  <input class="form-control" type="email" required placeholder="usuario@empresa.com">
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <label for="telefono">Teléfono de contacto</label>
+                  <input class="form-control" type="tel" required minlength="8" maxlength="8" placeholder="0000-0000">
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <label for="departamento">Departamento de Entrega</label>
+                  <select name="deptoEnvio" id="deptoEnvio" required>
+                    <option value="" selected disabled>--- Selecione Departamento de Entrega ---</option>
+                    <option value="comayagua">Comayagua</option>
+                    <option value="FM">Francisco Morazan</option>
+                    <option value="cortes">Cortés</option>
+                    <option value="laPaz">La Paz</option>
+                    <option value="Atlantida">Atlantida</option>
+                    <option value="IslasBahia">Islas de la Bahía</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <div>
+                  <label class="form-check-label" for="garantía">Acepta los Términos de garantía forestal por 5
+                    años</label>
+                  <input class="form-check-input" type="checkbox" name="garantia" required>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div>
-            <div>
-              <label for="rtn">RTN Institucional</label>
-              <input type="number" required minlength="14" maxlength="14" placeholder="0000-0000-000000">
-            </div>
-          </div>
+            <div class="col-12 px-5 py-4 btn-group">
+              <div class="col-7 px-5">
+                <button class="btn btn-success btn-lg" type="submit">Enviar Cotización</button>
+              </div>
 
-          <div>
-            <div>
-              <label for="correo">Correo Institucional</label>
-              <input type="email" required placeholder="usuario@empresa.com">
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <label for="telefono">Teléfono de contacto</label>
-              <input type="tel" required minlength="8" maxlength="8" placeholder="0000-0000">
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <label for="departamento">Departamento de Entrega</label>
-              <select name="deptoEnvio" id="deptoEnvio" required>
-                <option value="" selected disabled>--- Selecione Departamento de Entrega ---</option>
-                <option value="comayagua">Comayagua</option>
-                <option value="FM">Francisco Morazan</option>
-                <option value="cortes">Cortés</option>
-                <option value="laPaz">La Paz</option>
-                <option value="Atlantida">Atlantida</option>
-                <option value="IslasBahia">Islas de la Bahía</option>
-              </select>
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <label for="garantía">Acepta los Términos de garantía forestal por 5 años</label>
-              <input type="checkbox" name="garantia" required>
-            </div>
-          </div>
+              <div class="col-6 px-5">
+                <button class="btn btn-warning btn-lg" type="reset">Limpiar Formulario</button>
+              </div>
+              <div>
+          </form>
         </div>
-
-        <div>
-          <button type="submit">Enviar Cotización</button>
-        </div>
-
-        <div>
-          <button type="reset">Limpiar Formulario</button>
-        </div>
-      </form>
-
+      </div>
     </section>
 
 
 
   </main>
 
-  <footer>
-    <div id="info-locacion">
-      <p>Siguatepeque. KM 114 Carretera CA-5.</p>
-      <p>Tel: 2238-0000</p>
-    </div>
+  <footer class="py-5 border-top text-dark">
+    <div class="container">
+      <div id="info-locacion" class="col-12 text-center">
+        <p>Siguatepeque. KM 114 Carretera CA-5.</p>
+        <p>Tel: 2238-0000</p>
+      </div>
 
-    <div class="redes">
-      <figure>
-        <a href="http://facebook.com" class="facebook">
-          <img src="" alt="red-facebook" />
-          <p>facebook</p>
-        </a>
-      </figure>
+      <div class="redes row py-2">
+        <figure class="col-4">
+          <a href="http://facebook.com" class="facebook">
+            <i class="bi bi-facebook"> facebook</i>
+          </a>
+        </figure>
 
-      <figure>
-        <a href="http://instagram.com" class="facebook">
-          <img src="" alt="red-insta" />
-          <p>Instagram</p>
-        </a>
-      </figure>
+        <figure class="col-4">
+          <a href="http://instagram.com" class="facebook">
+            <i class="bi bi-instagram"> instagram</i>
+            <p>Instagram</p>
+          </a>
+        </figure>
+
+        <div class="col-4">
+          <p> &copy; 2026 </p>
+        </div>
+      </div>
     </div>
   </footer>
 
